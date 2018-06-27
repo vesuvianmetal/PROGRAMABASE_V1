@@ -25,5 +25,10 @@ namespace ProgramaBase
         {
 
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

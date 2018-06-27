@@ -11,6 +11,10 @@ using System.Windows.Forms;
 /// <summary>
 /// This window/code makes the log in work
 /// </summary>
+/// 
+
+///importacion de las librerias de mysql
+using MySql.Data;
 
 namespace ProgramaBase
 {

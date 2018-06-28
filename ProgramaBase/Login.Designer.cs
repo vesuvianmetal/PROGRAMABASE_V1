@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(81, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
@@ -47,6 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(81, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -55,7 +58,7 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(178, 338);
+            this.btnlogin.Location = new System.Drawing.Point(184, 343);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(75, 23);
             this.btnlogin.TabIndex = 2;
@@ -65,22 +68,26 @@
             // 
             // txtuser
             // 
-            this.txtuser.Location = new System.Drawing.Point(245, 167);
+            this.txtuser.Location = new System.Drawing.Point(245, 164);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(100, 22);
+            this.txtuser.Size = new System.Drawing.Size(186, 22);
             this.txtuser.TabIndex = 4;
             // 
             // txtpass
             // 
             this.txtpass.Location = new System.Drawing.Point(245, 211);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 22);
+            this.txtpass.Size = new System.Drawing.Size(186, 22);
             this.txtpass.TabIndex = 5;
+            this.txtpass.UseSystemPasswordChar = true;
+            this.txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpass_KeyDown);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(466, 488);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
@@ -88,8 +95,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
